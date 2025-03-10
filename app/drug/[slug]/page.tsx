@@ -13,7 +13,6 @@ const DrugPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <>
       <Header />
-
       <div className="container mx-auto max-w-5xl p-6 flex flex-col md:flex-row gap-6">
         <div className="md:w-2/3">
           <DrugDetails

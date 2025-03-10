@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
       headers: [
         {
           key: 'Cache-Control',
-          value: 'no-store',
+          value: 's-maxage=86400',
         },
       ],
     },
