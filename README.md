@@ -46,7 +46,7 @@ Testing is an integral part of the development process. **Jest** and **React Tes
 
 ### **5\. Caching and Performance**
 
-The application utilizes **caching strategies** to minimize unnecessary API requests. By caching data for a limited period, we avoid fetching the same data repeatedly, improving performance and user experience. In the main page we use infinite scrolling, to optimize of heavy data load creating creating a user friendly experience.
+The application utilizes **caching strategies** to minimize unnecessary API requests. By caching data for a limited period, we avoid fetching the same data repeatedly, improving performance and user experience. In the main page we use infinite scrolling, to optimize heavy data load creating a user friendly experience.
 
 ### **6\. Responsive Design**
 
