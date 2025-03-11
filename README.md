@@ -67,21 +67,23 @@ The project follows **standard git practices** for commit messages, branch namin
 
 ### **9\. Folder structure**
 
-app/ \# This is the main folder using App Router (no pages folder needed)  
-├── api/ \# Server-side logic (data fetching with caching)  
-│ ├── search \# Returns filtered data  
-│ ├── drug \# Returns a specific drug's data  
-├── components/ \# Reusable React components  
-│ ├── drug/ \# Drug components (for detailed view)  
-│ ├── layout/ \# Layout components  
-│ └── search/ \# Search components (for main page view)  
-├── drug/ \# Detail view for specific drug  
-├── fonts/ \# Fonts  
-├── hooks/ \# Shared hooks (empty, for future needs)  
-├── types/ \# TypeScript interfaces and types  
-\_\_tests\_\_/ \# Jest tests  
-public/ \# Static assets like images and icons  
+```
+app/ \# This is the main folder using App Router (no pages folder needed)
+├── api/ \# Server-side logic (data fetching with caching)
+│ ├── search \# Returns filtered data
+│ ├── drug \# Returns a specific drug's data
+├── components/ \# Reusable React components
+│ ├── drug/ \# Drug components (for detailed view)
+│ ├── layout/ \# Layout components
+│ └── search/ \# Search components (for main page view)
+├── drug/ \# Detail view for specific drug
+├── fonts/ \# Fonts
+├── hooks/ \# Shared hooks (empty, for future needs)
+├── types/ \# TypeScript interfaces and types
+\_\_tests\_\_/ \# Jest tests
+public/ \# Static assets like images and icons
 Root folder contains the app configuration and for **ESLint**, **Prettier**, **Jest**, **TypeScript**.
+```
 
 ## **Installing the project**
 
