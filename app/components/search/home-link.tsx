@@ -14,6 +14,7 @@ const SearchHomeLink = ({ clearQuery }: SearchHomeLinkProps) => {
     <Link
       href="/"
       aria-label="Go to Home"
+      title="Go to Home"
       rel="preload"
       className="text-gray-400 cursor-pointer hover:text-black"
       onClick={handleClick}
