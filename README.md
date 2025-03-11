@@ -7,7 +7,13 @@
 
 ## **Project Description**
 
-This project is a simple TEST engine search application built with **Next.js**, **TypeScript**, and **TailwindCSS**.
+This project is a simple TEST engine search application built with **Next.js 15**, **TypeScript** and **TailwindCSS**.  
+A few screenshots:  
+![Screenshot 1](public/screenshot1.png)
+![Screenshot 2](public/screenshot2.png)
+![Screenshot 3](public/screenshot3.png)
+![Screenshot 4](public/screenshot4.png)
+![Screenshot 5](public/screenshot5.png)
 
 **Key Technologies**
 
