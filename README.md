@@ -4,16 +4,11 @@
 
 - [Key Design Decisions](#key-design-decisions)
 - [Installing the project](#installing-the-project)
+- [Screenshots](#screenshots)
 
 ## **Project Description**
 
-This project is a simple TEST engine search application built with **Next.js 15**, **TypeScript** and **TailwindCSS**.  
-A few screenshots:  
-![Screenshot 1](public/screenshot1.png)
-![Screenshot 2](public/screenshot2.png)
-![Screenshot 3](public/screenshot3.png)
-![Screenshot 4](public/screenshot4.png)
-![Screenshot 5](public/screenshot5.png)
+This project is a simple TEST engine search application built with **Next.js 15 (App Router)**, **TypeScript** and **TailwindCSS**.
 
 **Key Technologies**
 
@@ -193,5 +188,13 @@ git push origin feature/\<branch-name\>
 - Go to the [repository](https://github.com/devraid/search-app-next).
 - Click **"Pull Requests"** and then **"New Pull Request"**.
 - Select your fork and branch as the source and create the pull request.
+
+## **Screenshots**
+
+<img src="public/screenshot1.png" alt="App Screenshot" style="border: 2px solid #000; max-width: 600px; width: 100%;" />
+<img src="public/screenshot2.png" alt="App Screenshot" style="border: 2px solid #000; max-width: 600px; width: 100%;" />
+<img src="public/screenshot3.png" alt="App Screenshot" style="border: 2px solid #000; max-width: 600px; width: 100%;" />
+<img src="public/screenshot4.png" alt="App Screenshot" style="border: 2px solid #000; max-width: 600px; width: 100%;" />
+<img src="public/screenshot5.png" alt="App Screenshot" style="border: 2px solid #000; max-width: 600px; width: 100%;" />
 
 **Thanks for reading this\!**
