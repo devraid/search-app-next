@@ -13,6 +13,7 @@ global.IntersectionObserver = class IntersectionObserver {
 } as any
 
 jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
   useSearchParams: () => ({
     get: () => 'query',
   }),

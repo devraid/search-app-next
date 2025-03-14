@@ -20,6 +20,8 @@ const DrugPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
           product={product.product}
           status={product.status}
           description={product.description}
+          mechanism={product.mechanism}
+          sideEffects={product.sideEffects}
         />
       </div>
     </>

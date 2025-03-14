@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useInView } from 'react-intersection-observer'
 import { Product } from '@/app/types'
@@ -13,17 +13,16 @@ const SearchPage = () => {
   const searchParams = useSearchParams()
   const query = searchParams.get('query')?.trim() || ''
   const [results, setResults] = useState<Product[]>([])
-  const [filteredResults, setFilteredResults] = useState<Product[]>([])
   const [selectedItem, setSelectedItem] = useState<Product | null>(null)
   const [loading, setLoading] = useState(true)
   const [selectedStatus, setSelectedStatus] = useState<string | null>(null)
+  const availableStatus = useMemo(() => [...new Set(results.map((item) => item.status))].sort(), [results])
   const { ref, inView } = useInView()
 
   useEffect(() => {
     setSelectedItem(null)
     setResults([])
-    setFilteredResults([])
-    setSelectedStatus(null) // Reset filter when query changes
+    setSelectedStatus(null)
   }, [query])
 
   useEffect(() => {
@@ -33,8 +32,7 @@ const SearchPage = () => {
         const data = await getSearchResults(query)
         setResults((prevResults) => [...prevResults, ...data])
       } catch (error) {
-        console.error('Error fetching data:', error)
-        setResults([])
+        console.error('Error fetching data: ', error)
       } finally {
         setLoading(false)
       }
@@ -42,12 +40,8 @@ const SearchPage = () => {
     if (inView) fetchData()
   }, [query, inView])
 
-  useEffect(() => {
-    if (selectedStatus) {
-      setFilteredResults(results.filter((item) => item.status === selectedStatus))
-    } else {
-      setFilteredResults(results)
-    }
+  const filteredResults = useMemo(() => {
+    return selectedStatus ? results.filter((item) => item.status === selectedStatus) : results
   }, [selectedStatus, results])
 
   return (
@@ -55,13 +49,11 @@ const SearchPage = () => {
       <Header />
       <div className="container mx-auto max-w-5xl p-6 flex flex-col md:flex-row gap-6">
         <div className="md:w-2/3">
-          {results.length > 2 && (
-            <SearchStatusFilter
-              statuses={['In Development', 'Approved', 'Phase 1', 'Phase 2', 'Phase 3']}
-              selectedStatus={selectedStatus}
-              setSelectedStatus={setSelectedStatus}
-            />
-          )}
+          <SearchStatusFilter
+            statuses={availableStatus}
+            selectedStatus={selectedStatus}
+            setSelectedStatus={setSelectedStatus}
+          />
           <SearchList
             results={filteredResults}
             loading={loading}
