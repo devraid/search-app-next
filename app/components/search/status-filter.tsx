@@ -1,10 +1,12 @@
-interface SearchStatusFilterrProps {
+import React from 'react'
+
+interface SearchStatusFilterProps {
   statuses: string[]
   selectedStatus: string | null
   setSelectedStatus: (status: string | null) => void
 }
 
-const SearchStatusFilter: React.FC<SearchStatusFilterrProps> = ({ statuses, selectedStatus, setSelectedStatus }) => {
+const SearchStatusFilter = ({ statuses, selectedStatus, setSelectedStatus }: SearchStatusFilterProps) => {
   if (statuses.length < 2) return null
 
   return (
@@ -18,6 +20,7 @@ const SearchStatusFilter: React.FC<SearchStatusFilterrProps> = ({ statuses, sele
               selectedStatus === status ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
             role="button"
+            aria-pressed={selectedStatus === status}
             onClick={() => setSelectedStatus(status === selectedStatus ? null : status)}
           >
             {status}
@@ -28,4 +31,4 @@ const SearchStatusFilter: React.FC<SearchStatusFilterrProps> = ({ statuses, sele
   )
 }
 
-export default SearchStatusFilter
+export default React.memo(SearchStatusFilter)
