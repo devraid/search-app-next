@@ -8,7 +8,7 @@
 
 ## **Project Description**
 
-This project is a simple TEST engine search application built with **Next.js 15 (App Router)**, **TypeScript** and **TailwindCSS**.
+This project is a simple engine search application built with **Next.js 15 (App Router)**, **TypeScript** and **TailwindCSS**.
 
 **Key Technologies**
 
